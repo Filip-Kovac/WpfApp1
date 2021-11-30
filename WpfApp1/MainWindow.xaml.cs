@@ -39,41 +39,77 @@ namespace WpfApp1
             while (b)
             {
                 en++;
-                Algorithm();
+                Algorithm(Convert.ToInt16(rtimes1.Text), Convert.ToChar(number1.Text), );
+            }
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            en = 1;
+            b = true;
+            while (b)
+            {
+                en++;
+                Algorithm(Convert.ToInt16(rtimes1.Text), Convert.ToChar(number1.Text));
             }
         }
 
-        public void Algorithm()
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            en = 1;
+            b = true;
+            while (b)
+            {
+                en++;
+                Algorithm(Convert.ToInt16(rtimes1.Text), Convert.ToChar(number1.Text));
+            }
+
+        }
+
+        //public void Algorithm()
+        //{
+        //    for (int i = 2; i < 10; i++)
+        //    {
+        //        if (en != i) if (en % i == 0) return; //kontroluje prvočíslo
+        //    }
+        //    string s = Convert.ToString(en);
+        //    rt = Convert.ToInt16(rtimes1.Text);
+        //    for (int i = 0; i < s.Length; i++)
+        //    {
+        //        if (s[i] == Convert.ToChar(number1.Text))
+        //        {
+        //            for (int ii = 0; ii < rt; ii++)
+        //            {
+        //                if (i + rt >= s.Length) return;
+        //                else if (s[i + ii] != Convert.ToChar(number1.Text)) return;
+
+        //            }
+        //            endnumber1.Content = en; //výpis finálního čísla
+        //            b = false;
+        //        }
+        //    }
+
+        //}
+        public void Algorithm(int cislo, int opakovani, int en)
         {
             for (int i = 2; i < 10; i++)
             {
                 if (en != i) if (en % i == 0) return; //kontroluje prvočíslo
             }
             string s = Convert.ToString(en);
-            rt = Convert.ToInt16(rtimes1.Text);
             for (int i = 0; i < s.Length; i++)
             {
-                if (s[i] == Convert.ToChar(number1.Text))
+                if (s[i] == cislo)
                 {
-                    for (int ii = 0; ii < rt; ii++)
+                    for (int ii = 0; ii < opakovani; ii++)
                     {
-                        if (i + rt >= s.Length) return;
-                        else if (s[i + ii] != Convert.ToChar(number1.Text)) return;
+                        if (i + opakovani >= s.Length) return;
+                        else if (s[i + ii] != cislo) return;
 
                     }
                     endnumber1.Content = en; //výpis finálního čísla
                     b = false;
                 }
             }
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
 
         }
     }
