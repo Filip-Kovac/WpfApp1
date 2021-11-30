@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Start" Grid.Column="5" Grid.Row="1" Grid.RowSpan ="2" FontSize="25" Click="Button_Click"/>
+        <Button Content="Start" Grid.Column="5" Grid.Row="5" Grid.RowSpan ="2" FontSize="25" Click="Button_Click_1"/>
+        <Button Content="Start" Grid.Column="5" Grid.Row="9" Grid.RowSpan ="2" FontSize="25" Click="Button_Click_2"/>
+        
+        <Label Content="Opakování" Grid.Row="1" Grid.Column="1" FontSize="25" HorizontalAlignment="Center"/>
+        <Label Content="Opakování" Grid.Row="5" Grid.Column="1" FontSize="25" HorizontalAlignment="Center"/>
+        <Label Content="Opakování" Grid.Row="9" Grid.Column="1" FontSize="25" HorizontalAlignment="Center"/>
+        <Label Content="Číslo" Grid.Row="1" Grid.Column="2" FontSize="25" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+        <Label Content="Číslo" Grid.Row="5" Grid.Column="2" FontSize="25" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+        <Label Content="Číslo" Grid.Row="9" Grid.Column="2" FontSize="25" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+        <Label Name="endnumber1" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Name="endnumber2" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Name="endnumber3" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <TextBox Name="rtimes1" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Name="rtimes2" Grid.Row="6" Grid.Column="1"/>
+        <TextBox Name="rtimes3" Grid.Row="10" Grid.Column="1"/>
+        
+        <TextBox Name="number1" Grid.Row="2" Grid.Column="2"/>
+        <TextBox Name="number2" Grid.Row="6" Grid.Column="2"/>
+        <TextBox Name="number3" Grid.Row="10" Grid.Column="2"/>
+    </Grid>
+</Window>
